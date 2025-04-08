@@ -16,8 +16,8 @@ const Hero = () => {
         <div className="text-center max-w-3xl mx-auto animate-fade-in">
           {/* Profile Photo */}
           <div className="flex justify-center mb-6">
-            <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
-              <AvatarImage src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Gonçalo Branco" />
+            <Avatar className="w-40 h-40 border-4 border-white shadow-lg">
+              <AvatarImage src="/lovable-uploads/3529c970-5410-42c5-a7be-35730c930278.png" alt="Gonçalo Branco" />
               <AvatarFallback className="bg-microsoft-blue text-white text-xl">GB</AvatarFallback>
             </Avatar>
           </div>
