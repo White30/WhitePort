@@ -1,6 +1,7 @@
 
-import { ArrowDown } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Hero = () => {
   return (
@@ -13,6 +14,14 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto animate-fade-in">
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-6">
+            <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
+              <AvatarImage src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Gonçalo Branco" />
+              <AvatarFallback className="bg-microsoft-blue text-white text-xl">GB</AvatarFallback>
+            </Avatar>
+          </div>
+          
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
             Gonçalo Branco
           </h1>
@@ -29,15 +38,11 @@ const Hero = () => {
               <a href="#experience">View Experience</a>
             </Button>
             <Button variant="outline" className="border-microsoft-blue text-microsoft-blue hover:bg-microsoft-blue/10">
-              <a href="#certifications">See Certifications</a>
+              <a href="/resume.pdf" download="Goncalo_Branco_Resume.pdf" className="flex items-center gap-2">
+                <Download size={18} /> Download Resume
+              </a>
             </Button>
           </div>
-        </div>
-        
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
-          <a href="#experience" className="text-microsoft-blue">
-            <ArrowDown size={32} />
-          </a>
         </div>
       </div>
     </section>
